@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Restoran - Yönetim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-cookie-bite"></i>
+        </div>
+        <h1>Yönetim Paneli</h1>
+        <p>Cookie Restoran</p>
+        <button id="admin-logout" class="reset-link"><i class="fas fa-door-open"></i> Çıkış</button>
+    </header>
+
+    <div class="container">
+        <div class="admin-panel">
+            <h2 class="section-title">Kontrol Merkezi</h2>
+            <div class="admin-actions">
+                <div class="admin-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Menü Yönetimi</h3>
+                    <p>Kategori ve ürün ekle/düzenle/sil</p>
+                </div>
+                <!-- Görüş Bildirimleri kartı geçici olarak devre dışı
+                <div class="admin-card">
+                    <i class="fas fa-comment-alt"></i>
+                    <h3>Görüş Bildirimleri</h3>
+                    <p>Müşteri geri bildirimlerini görüntüle</p>
+                </div>
+                -->
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Ürün Ekle/Düzenle Modal -->
+    <div id="product-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Ürün Ekle</h3>
+                <button id="modal-close" class="btn outline small" aria-label="Kapat">Kapat</button>
+            </div>
+            <form id="product-form" class="modal-body">
+                <div class="form-group">
+                    <label for="product-name">Ürün Adı</label>
+                    <input id="product-name" class="form-control" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-desc">Açıklama</label>
+                    <textarea id="product-desc" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Fiyat (TL)</label>
+                    <input id="product-price" class="form-control" type="number" min="0" step="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-image-file">Görsel (Cihazdan)</label>
+                    <input id="product-image-file" class="form-control" type="file" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Kategori</label>
+                    <select id="product-category" class="form-control" required>
+                        <option value="corbalar">Çorbalar</option>
+                        <option value="anayemekler">Ana Yemekler</option>
+                        <option value="aperatifler">Aperatifler</option>
+                        <option value="icecekler">İçecekler</option>
+                        <option value="tatlilar">Tatlılar</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Cookie Restoran © 2025. Tüm hakları saklıdır.</p>
+        <p>İstanbul / Türkiye | +90 212 345 67 89 | info@cookierestoran.com</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+<style>
+    /* Admin sayfasında logo tıklayınca ana sayfaya dönüş */
+    header .logo { cursor: pointer; }
+    
+    /* Admin kartlarını ortala */
+    .admin-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Tek kart olduğunda ortada görünsün */
+    .admin-card {
+        margin: 0 auto;
+    }
+    
+
+</style>
+</html>
+
+

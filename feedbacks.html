@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Restoran - Görüş Bildirimleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-cookie-bite"></i>
+        </div>
+        <h1>Görüş Bildirimleri</h1>
+        <p>Cookie Restoran</p>
+        <button id="back-admin" class="reset-link"><i class="fas fa-arrow-left"></i> Yönetim</button>
+    </header>
+
+    <div class="container">
+        <div class="admin-panel">
+            <h2 class="section-title">Gelen Mesajlar</h2>
+            <div class="table-responsive">
+                <table class="data-table" id="feedback-table">
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Ad Soyad</th>
+                            <th>E-posta</th>
+                            <th>Telefon</th>
+                            <th>Mesaj</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <h2 class="section-title" style="margin-top:1.5rem">Liste Görünümü</h2>
+            <div id="feedback-list"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Cookie Restoran © 2025. Tüm hakları saklıdır.</p>
+        <p>İstanbul / Türkiye | +90 212 345 67 89 | info@cookierestoran.com</p>
+    </footer>
+
+    <script src="feedbacks.js"></script>
+</body>
+</html>
+
+

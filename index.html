@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Restoran - QR Menü</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-cookie-bite"></i>
+        </div>
+        <h1>Cookie Restoran</h1>
+        <p>Lezzetin ve huzurun adresi</p>
+        <button id="reset-choice" class="reset-link hidden"><i class="fas fa-rotate"></i> Seçimi değiştir</button>
+    </header>
+
+    <div class="container">
+        <div id="choice-view" class="choice-view">
+            <div class="choice-card">
+                <h2 class="section-title">Ne yapmak istersiniz?</h2>
+                <div class="choice-actions">
+                    <button id="choose-feedback" class="btn large-btn"><i class="fas fa-comment-alt"></i> Görüş Bildir</button>
+                    <button id="choose-menu" class="btn large-btn outline"><i class="fas fa-utensils"></i> Menü</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu-view" class="menu-view hidden">
+            <div class="tabs">
+                <button class="tab-btn active" data-category="corbalar">Çorbalar</button>
+                <button class="tab-btn" data-category="anayemekler">Ana Yemekler</button>
+                <button class="tab-btn" data-category="aperatifler">Aperatifler</button>
+                <button class="tab-btn" data-category="icecekler">İçecekler</button>
+                <button class="tab-btn" data-category="tatlilar">Tatlılar</button>
+            </div>
+
+            <div class="menu-category active" id="corbalar">
+                <h2 class="category-title">Çorbalar</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="/img/balıktacos.jpeg" alt="Mercimek Çorbası" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Mercimek Çorbası</h3>
+                            <p class="item-desc">Geleneksel lezzetimiz, bol limonlu</p>
+                            <p class="item-price">45 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/img/izgarakofte.jpeg">
+                        <div class="item-info">
+                            <h3 class="item-title">Ezogelin Çorbası</h3>
+                            <p class="item-desc">Nane ve pul biberle servis edilir</p>
+                            <p class="item-price">50 TL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="anayemekler">
+                <h2 class="category-title">Ana Yemekler</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="https://i4.hurimg.com/i/hurriyet/75/750x422/5f5d86cb0f25441fb4c9eafa.jpg" alt="Köfte" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Cookie Köfte</h3>
+                            <p class="item-desc">Özel baharatlı, ızgara köftemiz</p>
+                            <p class="item-price">120 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://iasbh.tmgrup.com.tr/3645e0/650/344/0/77/800/500?u=https://isbh.tmgrup.com.tr/sbh/2019/03/19/1553002770771.jpg" alt="Kebap" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Adana Kebap</h3>
+                            <p class="item-desc">Özel marine edilmiş, bol baharatlı</p>
+                            <p class="item-price">140 TL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="aperatifler">
+                <h2 class="category-title">Aperatifler</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Patates+K%C4%B1zartmas%C4%B1" alt="Patates Kızartması" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Patates Kızartması</h3>
+                            <p class="item-desc">Altın sarısı, çıtır ve sıcak servis</p>
+                            <p class="item-price">60 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Sigara+B%C3%B6re%C4%9Fi" alt="Sigara Böreği" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Sigara Böreği</h3>
+                            <p class="item-desc">Peynir dolgulu, çıtır kızartma</p>
+                            <p class="item-price">65 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=So%C4%9Fan+Halkas%C4%B1" alt="Soğan Halkası" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Soğan Halkası</h3>
+                            <p class="item-desc">Özel pane ile kızarmış soğan halkaları</p>
+                            <p class="item-price">70 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Mozzarella+Sticks" alt="Mozzarella Sticks" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Mozzarella Sticks</h3>
+                            <p class="item-desc">Eritilmiş peynir, çıtır kaplama</p>
+                            <p class="item-price">85 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=%C3%87%C4%B1t%C4%B1r+Tavuk+Par%C3%A7alar%C4%B1" alt="Çıtır Tavuk Parçaları" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Çıtır Tavuk Parçaları</h3>
+                            <p class="item-desc">Özel sos ile servis edilen çıtır tavuk</p>
+                            <p class="item-price">90 TL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="icecekler">
+                <h2 class="category-title">İçecekler</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Ayran" alt="Ayran" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Ayran</h3>
+                            <p class="item-desc">Geleneksel, serinletici</p>
+                            <p class="item-price">25 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Kola" alt="Kola" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Kola</h3>
+                            <p class="item-desc">250 ml şişe</p>
+                            <p class="item-price">35 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Soda" alt="Soda" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Soda</h3>
+                            <p class="item-desc">Doğal mineralli içecek</p>
+                            <p class="item-price">25 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=%C5%9Ealgam" alt="Şalgam" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Şalgam</h3>
+                            <p class="item-desc">Acısız/acı seçenekli</p>
+                            <p class="item-price">30 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Limonata" alt="Limonata" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Limonata</h3>
+                            <p class="item-desc">Taze sıkılmış limon ile</p>
+                            <p class="item-price">40 TL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category" id="tatlilar">
+                <h2 class="category-title">Tatlılar</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=S%C3%BCtla%C3%A7" alt="Sütlaç" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Sütlaç</h3>
+                            <p class="item-desc">Fırınlanmış, tarçınlı</p>
+                            <p class="item-price">55 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=K%C3%BCnefe" alt="Künefe" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Künefe</h3>
+                            <p class="item-desc">Antep fıstıklı, şerbetli</p>
+                            <p class="item-price">90 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Baklava" alt="Baklava" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Baklava</h3>
+                            <p class="item-desc">Tereyağlı, ince katlar</p>
+                            <p class="item-price">85 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Tiramisu" alt="Tiramisu" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Tiramisu</h3>
+                            <p class="item-desc">Mascarpone ve kakao ile</p>
+                            <p class="item-price">80 TL</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://via.placeholder.com/600x400?text=Cheesecake" alt="Cheesecake" class="item-image">
+                        <div class="item-info">
+                            <h3 class="item-title">Cheesecake</h3>
+                            <p class="item-desc">Çilekli/sade seçenekli</p>
+                            <p class="item-price">85 TL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+<!--
+            <div class="qr-section">
+                <h2 class="section-title">QR Kodumuzu Okutun</h2>
+                <p>Menüyü telefonunuza kaydetmek ve arkadaşlarınızla paylaşmak için QR kodu okutun</p>
+                <div class="qr-code">
+                    <i class="fas fa-qrcode" style="font-size: 100px; color: #ccc;"></i>
+                </div>
+            </div>
+ -->
+            <div class="admin-panel hidden">
+                <h2 class="section-title">Yönetim Paneli</h2>
+                <p>Menü yönetimi ve görüş bildirimleri için yönetici girişi</p>
+                
+                <div class="admin-actions">
+                    <div class="admin-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Menü Yönetimi</h3>
+                        <p>Kategori ve ürün ekle/düzenle/sil</p>
+                    </div>
+                    <div class="admin-card">
+                        <i class="fas fa-comment-alt"></i>
+                        <h3>Görüş Bildirimleri</h3>
+                        <p>Müşteri geri bildirimlerini görüntüle</p>
+                    </div>
+                    <div class="admin-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Raporlar</h3>
+                        <p>Detaylı rapor ve analizler</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="feedback-view" class="feedback-view hidden">
+            <div class="feedback-section">
+                <h2 class="section-title">Görüşleriniz Bizim İçin Değerli</h2>
+                <form class="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Adınız ve soyadınız">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta Adresiniz</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="E-posta adresiniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefonunuz</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Telefon numaranız">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Görüşünüz</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Görüş ve önerileriniz..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Gönder</button>
+                </form>
+            </div>
+        </div>
+       
+    </div>
+
+    <footer>
+        <p>Cookie Restoran © 2025. Tüm hakları saklıdır.</p>
+        <p>İstanbul / Türkiye | +90 212 345 67 89 | info@cookierestoran.com</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
