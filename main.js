@@ -147,7 +147,7 @@ document.querySelector('.feedback-form').addEventListener('submit', function (e)
             chooseFeedback.addEventListener('click', function () {
                 console.log('Görüş bildir butonuna tıklandı');
                 // Google Form'a yönlendirme
-                var googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc8dJVLeKIKm_03bKs2J04H8gFPDJZ2Tg3CEQrKMrVnfPT_8Q/viewform?usp=headerT_8Q/viewform?usp=sharing&ouid=104837034450252506491'; // Buraya Google Form URL'nizi yazın
+                var googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc8dJVLeKIKm_03bKs2J04H8gFPDJZ2Tg3CEQrKMrVnfPT_8Q/viewform?usp=header'; // Buraya Google Form URL'nizi yazın
                 window.open(googleFormUrl, '_blank');
             });
         }
